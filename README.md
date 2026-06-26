@@ -71,6 +71,3 @@ gemini-api
 investigation
 nlp
 react
-```
-
-Isse repository aur bhi professional lagegi aur recruiters ko project samajhne me aasani hogi.
