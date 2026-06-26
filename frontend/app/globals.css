@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #f6f7f9;
+  --foreground: #15171c;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: #090a0d;
+  --foreground: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--background);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  color: var(--foreground);
+  background:
+    linear-gradient(rgba(34, 211, 238, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 139, 250, 0.04) 1px, transparent 1px),
+    var(--background);
+  background-size: 36px 36px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  color: #071014;
+  background: #67e8f9;
+}
+
+@layer base {
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-cyan-400 ring-offset-2 ring-offset-white dark:ring-offset-surface-950;
+  }
+}
+
+@layer components {
+  .investigation-panel {
+    @apply rounded-lg border border-zinc-200 bg-white/90 shadow-soft backdrop-blur dark:border-white/10 dark:bg-zinc-950/80 dark:shadow-dark-soft;
+  }
+
+  .field-input {
+    @apply w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-950 placeholder:text-zinc-400 transition focus:border-cyan-400 dark:border-white/10 dark:bg-zinc-900 dark:text-white dark:placeholder:text-zinc-500;
+  }
+}

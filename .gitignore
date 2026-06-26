@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+*.env
+backend/app/uploads/
+frontend/node_modules/
+.vscode/
